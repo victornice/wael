@@ -39,7 +39,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 // Use Static Folder
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 // Express Session Middleware
 app.use(session({
