@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {flex: 1 0 auto;}
+
+.container {width: 95% !important}
+
+.blue-grey {margin-right: 5px;}
+
+.brand-logo {font-size: 2vmax !important}
+
+.card-image
+{
+    height: 350px;
+    overflow: hidden;
+}
+
+.card-title {background-color: #19181880; width: 100%}
+
+.card-action a {color: #039be5 !important}
+.card-action a:hover {color: #039ae577 !important}
+
+.card-content p
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-upload
+{
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+	vertical-align: middle;
+}
+
+.file-upload span {vertical-align: middle}
+
+.file-upload i
+{
+    vertical-align: middle;
+    margin-left: 10px;
+    padding-bottom: 2px;
+}
+
+.file-upload .upload
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#fileuploadurl
+{
+    color: #888 !important;
+    display: inline-block;
+    border:none;
+	vertical-align: middle;
+	background: none;
+    box-shadow: none;
+    width: 250px;
+    margin-left: 15px;
+}
+
+.article-body
+{
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+.messages
+{
+    display: inline-block;
+    margin-top: 30px;
+    position: absolute;
+    top: 50px;
+    right: 35px;
+}
+
+span.badge.new 
+{
+    margin-left: 0;
+    position: relative;
+    transition: display 0.3s ease;
+    opacity: 1
+}
+
+span.badge.new:after {content: ''!important;}
+
+span .fa
+{
+    width: 15px;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    margin-right: -5px;
+    margin-left: 5px;
+}
+
+.fade
+{
+    transition: all 0.3s ease;
+    opacity: 0;
+    display: none;
+}
+
+.message 
+{
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+}
+
+.message p
+{
+    color: #F44336;
+    border-radius: 2px;
+    margin-top: 2px;
+}
+
+.form-box
+{
+    margin: 0 auto;
+    width: 65%;
+    padding: 30px 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+footer {margin-top: 50px}
+
+.error {background-color: #F44336 !important}
+.success {background-color: #4CAF50 !important}

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h3 #{title}
+    .row
+        each article in articles
+            .col.s12.m4
+                .card
+                    a(href=`/article/${article.title}?title=${article.title}&id=${article.author}`)
+                        .card-image
+                            img(src=article.image alt="Article Image")
+                            span.card-title #{article.title}
+                    .card-content
+                        p #{article.body}
+                    .card-action
+                        a(href=`/article/${article.title}?title=${article.title}&id=${article.author}`) See more

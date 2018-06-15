@@ -1,0 +1,50 @@
+extends layout
+
+block content
+    .form-box
+        h3.center Register
+        br
+        form(method="POST" action="/user/register")
+            .row
+                .input-field
+                    input#name(type="text" name="name" class="validate" value=name)
+                    label(for="name") Name
+                if errors
+                    each error in errors
+                        if (error.param == 'name')
+                            .message
+                                p(class="alert") #{error.msg}
+                .input-field
+                    input#email(type="text" name="email" class="validate" value=email)
+                    label(for="email") Email
+                if errors
+                    each error in errors
+                        if (error.param == 'email')
+                            .message
+                                p(class="alert") #{error.msg}
+                .input-field
+                    input#username(type="text" name="username" class="validate" value=username)
+                    label(for="username") Username
+                if errors
+                    each error in errors
+                        if (error.param == 'username')
+                            .message
+                                p(class="alert") #{error.msg}
+                .input-field
+                    input#password(type="password" name="password" class="validate")
+                    label(for="password") Password
+                if errors
+                    each error in errors
+                        if (error.param == 'password')
+                            .message
+                                p(class="alert") #{error.msg}
+                .input-field
+                    input#password2(type="password" name="password2" class="validate")
+                    label(for="password2") Confirm Password
+                if errors
+                    each error in errors
+                        if (error.param == 'password2')
+                            .message
+                                p(class="alert") #{error.msg}
+            button(type="submit" class="btn waves-effect light-blue darken-1") Submit
+                i.material-icons.right send

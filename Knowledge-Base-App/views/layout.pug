@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="icon" type="image/png" href="http://example.com/favicon.png")
+        link(rel="stylesheet" href="/assets/css/style.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous")
+        title Knowledge Base
+    body
+        nav.light-blue.darken-2
+            .nav-wrapper
+                .container
+                    a.brand-logo(href='#') Knowledge Base
+                        i.material-icons.left book
+                    a.sidenav-trigger(href='#' data-target='mobile-demo')
+                        i.material-icons menu
+
+                    ul.right.hide-on-med-and-down(id="nav-mobile")
+                        li
+                            a(href='/') Home
+                        if user
+                            li
+                                a(href='/article/add') Add Article
+                            li
+                                a(href='/user/logout') Logout
+                        else
+                            li
+                                a(href='/user/register') Register
+                            li
+                                a(href='/user/login') Login
+        main
+            ul.sidenav(id="mobile-demo")
+                li
+                    a(href='/') Home
+                if user
+                    li
+                        a(href='/article/add') Add Article
+                    li
+                        a(href='/user/logout') Logout
+                else
+                    li
+                        a(href='/user/register') Register
+                    li
+                        a(href='/user/login') Login
+            .container
+                != messages('message', locals)
+                block content
+                br
+        footer(class="page-footer light-blue darken-2")
+            .footer-copyright
+                .container
+                    p Copyright &copy; 2018 By Wael Ahmed
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js")
+        script(src="/assets/js/custom.js" type="text/javascript")

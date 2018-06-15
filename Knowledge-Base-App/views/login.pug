@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    .message #{message}
+    .form-box
+        h3.center Login
+        br
+        form(method="POST" action="/user/login")
+            .row
+                .input-field
+                    input#email(type="text" name="email" class="validate autocomplete")
+                    label(for="email") Email
+                .input-field
+                    input#password(type="password" name="password" class="validate autocomplete")
+                    label(for="password") Password
+            button(type="submit" class="btn waves-effect light-blue darken-1") Login
+                i.material-icons.right send
